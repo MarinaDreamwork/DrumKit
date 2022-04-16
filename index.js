@@ -12,8 +12,9 @@ function stopTransition(e) {
   if(e.propertyName !== 'transform') return;
   this.classList.remove('playing');
 }
-window.addEventListener('keydown', playSound);
 
 const keys = document.querySelector('.keys').childNodes;
 
 keys.forEach(key => key.addEventListener('transitionend', stopTransition));
+
+window.addEventListener('keydown', playSound);
